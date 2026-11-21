@@ -130,16 +130,10 @@ MAILERS = {
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "AgriSphere API",
-    "DESCRIPTION": """
-    API documentation for AgriSphere Agriculture Management Platform.
-
-    Core Modules:
-    - Land Management
-    - Crop Management
-    - Expense Tracking
-    - Harvest Management
-    - Sales Management
-    """,
+    "DESCRIPTION": "API documentation for AgriSphere",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
+
+    "SWAGGER_UI_DIST": "SIDECAR",
+    "REDOC_DIST": "SIDECAR",
 }
