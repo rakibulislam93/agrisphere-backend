@@ -22,6 +22,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Third-party apps
+    'rest_framework',
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
 ]
 
 MIDDLEWARE = [
@@ -33,6 +38,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+
 
 ROOT_URLCONF = 'config.urls'
 
@@ -114,4 +125,21 @@ MAILERS = {
     'default': {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
+}
+
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "AgriSphere API",
+    "DESCRIPTION": """
+    API documentation for AgriSphere Agriculture Management Platform.
+
+    Core Modules:
+    - Land Management
+    - Crop Management
+    - Expense Tracking
+    - Harvest Management
+    - Sales Management
+    """,
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
 }
