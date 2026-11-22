@@ -1,3 +1,1 @@
-
-from .account import *
-from .managers import *
+from .account import CustomUser

@@ -1,7 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from apps.common.models import TimeStampedModel
-from apps.accounts.models import CustomUserManager
+from apps.accounts.models.managers import CustomUserManager
 
 
 class CustomUser(AbstractUser, TimeStampedModel):
