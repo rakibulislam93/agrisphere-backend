@@ -11,7 +11,6 @@ class CustomUser(AbstractUser, TimeStampedModel):
 
     full_name = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=20, unique=True)
-    email = models.
     
     USERNAME_FIELD = 'phone_number'
     REQUIRED_FIELDS = ['full_name']
