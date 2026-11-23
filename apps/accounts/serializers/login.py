@@ -28,7 +28,11 @@ class LoginSerializer(serializers.Serializer):
         refresh = RefreshToken.for_user(user)
 
         return {
-            "user": user,
+            "user": {
+                "id": user.id,
+                "phone_number": user.phone_number,
+                "full_name": user.full_name,
+            },
             "refresh": str(refresh),
             "access": str(refresh.access_token),
         }
