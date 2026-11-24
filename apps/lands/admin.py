@@ -1,3 +1,6 @@
 from django.contrib import admin
+from apps.lands.models import Land
 
-# Register your models here.
+@admin.register(Land)
+class LandAdmin(admin.ModelAdmin):
+    list_display = ('id','name','farmer','area','location','is_active')

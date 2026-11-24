@@ -17,7 +17,7 @@ class Land(TimeStampedModel):
         choices=LandType.choices,
         default=LandType.OWNED,
     )
-    location = models.CharField(max_length=255)
+    location = models.CharField(max_length=255, blank=True, null=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
